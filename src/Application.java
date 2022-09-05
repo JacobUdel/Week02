@@ -3,7 +3,9 @@ public class Application {
 	
 	public static void main(String[] args) {
 		
-		/* System.out.println(2 == 2);
+		/* 
+		From the classroom videos...
+		System.out.println(2 == 2);
 		System.out.println(2 > 5);
 		System.out.println(3 <= 5);
 		System.out.println(5 <+ 5);
@@ -13,7 +15,7 @@ public class Application {
 		System.out.println(true || false);
 		System.out.println(false || false);
 		System.out.println(2 == 2 || 2 == 5); 
-		*/
+		
 		String name = "Tom";
 		if (name == "Sam") {
 			System.out.println("Hello, Sam");
@@ -107,8 +109,112 @@ public class Application {
 		}
 		}
 		System.out.println("Your total is: " + total);
+		*/
 		
+		// From the Lab videos
+		
+		int age = 14;
+		System.out.println(age >= 16);
+		age = 18;
+		System.out.println(age >= 16);
+		
+		boolean hasLicense = true;
+		
+		if (age >= 16 && hasLicense) {
+			System.out.println("You can drive.");
+		} else {
+			System.out.println("You can NOT drive!");
+		}
+		
+		double costOfMilk = 3.15;
+		int thirstLevel = 7;
+		
+		if (costOfMilk < 2.5 || thirstLevel > 6) {
+			System.out.println("Milk please!");
+		} else {
+			System.out.println("No thanks.");
+		}
+		
+		int numberOfCookies= 7;
+		int numberOfChildren = 2;
+		int remainingCookies = numberOfCookies % numberOfChildren;
+		
+		if (remainingCookies > 5) {
+			System.out.println("Jackpot!");
+		} else if (remainingCookies >= 2) {
+			System.out.println("Yoohoo!");
+		} else if (remainingCookies > 0) {
+			System.out.println("Yes!");
+		} else {
+			System.out.println("Sad face");
+		}
+		
+		String loyalityMemberStatus = "PLATINUM";
+		double loyalityMemberDiscount = 0.0;
+		
+		switch (loyalityMemberStatus) {
+		case "SILVER":
+			loyalityMemberDiscount = .1;
+			break;
+		case "GOLD":
+			loyalityMemberDiscount = .15;
+			break;
+		case "PLATINUM":
+			loyalityMemberDiscount = .25;
+		
+		}
+		System.out.println(loyalityMemberDiscount);
+		
+		double billTotal = 640.50;
+		double adjustedTotal = billTotal - loyalityMemberDiscount * billTotal;
+		
+		System.out.println(adjustedTotal);
+		if (adjustedTotal > 500) {
+			if (loyalityMemberStatus == "SILVER") {
+				loyalityMemberStatus = "GOLD";
+			} else if (loyalityMemberStatus == "GOLD") {
+				loyalityMemberStatus = "PLATINUM";
+			}
+			
+		}
+		System.out.println(loyalityMemberStatus);
+		
+		String username = "Tommy123";
+		String password = "12345";
+		
+		if (username.equals("Tommy123") && password.equals("12345")) {
+			System.out.println("Login successful");
+			
+		} else {
+			System.out.println("Login failed");
+		}
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.println(i);
+		}
+		
+		for (int i = 10; i >= 0; i--) {
+			System.out.println(i);
+		}
+		
+		for (int i = 0; i <=100; i += 2) {
+			System.out.println(i);
+		}
+		
+		for (int i = 0; i <=100; i++) {
+			if (i % 2 == 0) {
+				System.out.println(i + " EVEN");
+			} else {
+				System.out.println(i + " ODD");
+			}
+		}
+		
+		int i = 100;
+		while (i > 0) {
+			System.out.println(i + " " + i % 3);
+			i--;
+		}
 		
 	}
-
+ 
 }
