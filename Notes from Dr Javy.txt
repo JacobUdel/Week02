@@ -1,0 +1,54 @@
+import java.util.*;
+public class HelloWorld { //this is my class
+	public static void main(String[] args) {
+		Scanner kb = new Scanner(System.in);
+		
+		
+		int num = (int)(Math.random() * 100 + 1);
+	
+	 //if statements
+		System.out.println("Guess my number. 1-100. You have unlimited tries");
+		System.out.println("take a guess!");
+		boolean run = true;
+		while(run) {
+			int guess = kb.nextInt();
+			
+			if( guess > num) {
+				System.out.println("too high");
+			}
+			else if(guess < num) {
+				System.out.println("too low");
+			}
+			else{
+				System.out.println("YOU GOT IT!");
+				run = false;
+			}
+		}		
+		
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////
+
+Scanner kb = new Scanner(System.in);
+		//storing Ints
+		System.out.println("how old are you?");
+		int age = Integer.parseInt( kb.nextLine() );
+		System.out.println("Oh " + age + " is not that old\n");
+		
+		//storing double
+		System.out.println("What is your gpa?");
+		double gpa = Double.parseDouble( kb.nextLine() );
+		System.out.println("wow! "+ gpa + " is a great GPA!\n");
+		
+		/*storing SINGLE words
+		System.out.println("what is your first name?");
+		String fname = kb.next();
+		System.out.println("hi " + fname);
+		*/
+		
+		//store MULTIPLE words
+		System.out.println("what is your Full name?");
+		String name = kb.nextLine();
+		System.out.println("hi " + name);
